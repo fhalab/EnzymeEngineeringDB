@@ -4,7 +4,6 @@ sandbox/*
 sandbox_old/
 sandbox_old/*
 
-tests/seqfit/*.csv
 
 *.xlsx
 *.csv
@@ -15,7 +14,6 @@ MSA-240818-JR-F2/*
 barcodes.txt
 
 # ---------------- data ignores
-*data
 *software
 
 # ---------------- specific ignores
