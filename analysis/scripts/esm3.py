@@ -24,7 +24,7 @@ import numpy as np
 from tqdm import tqdm 
 
 # Will instruct you how to get an API key from huggingface hub, make one with "Read" permission.
-login()
+login(token = None, add_to_git_credential = False)
 
 client = ESM3.from_pretrained("esm3-open").to("cuda") # or "cpu"
     
@@ -49,8 +49,8 @@ def run(df):
     df['esm3_mean']  = means
     return df
     
-train_df = pd.read_csv('DF4_parents.csv')
+train_df = pd.read_csv('../output/protein-evolution-database_V4_proteins_reactions_clean_unique_variants.csv')
 id_col = 'id'
 seq_col = 'parent_aa'
 df = run(train_df)
-df.to_pickle('esm3_DF4_parents.pkl')
+df.to_pickle('../output/protein-evolution-database_V4_proteins_reactions_clean_unique_variants.pkl')
