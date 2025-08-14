@@ -1,4 +1,4 @@
-# DirectedEvolutionDB
+# EnzEngDB
 
 A comprehensive database and analysis pipeline for studying directed evolution of enzymes performing new-to-nature reactions.
 
