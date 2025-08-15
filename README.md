@@ -129,6 +129,13 @@ DirectedEvolutionDB/
 3. Different research groups tend to explore different regions of chemical/sequence space
 4. The database captures the diversity of new-to-nature enzymatic reactions
 
+## LLM pipeline
+The LLM pipeline can be accessed at: https://github.com/YuemingLong/DEBase
+The Automated download of pubmed papers can be accessed at: 
+
+## Website and database
+The database and website can be accessed at: 
+
 ## Contributing  
 
 We welcome contributions! Please feel free to submit issues or pull requests. For formatting please format your data in the `LevSeq` output format.
