@@ -131,7 +131,7 @@ DirectedEvolutionDB/
 
 ## LLM pipeline
 The LLM pipeline can be accessed at: https://github.com/YuemingLong/DEBase
-The Automated download of pubmed papers can be accessed at: 
+The Automated download of pubmed papers can be accessed at: https://github.com/31415erre/pubmed2pdf
 
 ## Website and database
 The database and website can be accessed at: 
