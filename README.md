@@ -4,7 +4,7 @@ A comprehensive database and analysis pipeline for studying directed evolution o
 
 ## Overview  
 
-DirectedEvolutionDB curates and analyzes data from directed evolution experiments documented in scientific literature, focusing on engineered enzymes that catalyze reactions not found in nature. The project creates molecular embeddings for both protein sequences and chemical reactions to enable machine learning applications and comparative analyses.
+The Enzyme Engineering database curates and analyzes data from directed evolution experiments documented in scientific literature, focusing on engineered enzymes that catalyze reactions not found in nature. The project creates molecular embeddings for both protein sequences and chemical reactions to enable machine learning applications and comparative analyses.
 
 ## Features 
 
@@ -31,15 +31,13 @@ DirectedEvolutionDB curates and analyzes data from directed evolution experiment
 
 ### Install via pip  
 
-
 ```
 # Clone the repository
-git clone https://github.com/yourusername/DirectedEvolutionDB.git
-cd DirectedEvolutionDB
+git clone https://github.com/yourusername/EnzymeEngineeringDB.git
+cd EnzymeEngineeringDB
 
-# Create a virtual environment (recommended)
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+# Create env
+conda create --name enzengdb
 
 # Install dependencies
 pip install -r requirements.txt
@@ -51,7 +49,7 @@ The project requires the following main packages:
 - Core: `pandas`, `numpy`, `scikit-learn`, `matplotlib`, `seaborn`
 - Chemistry: `rdkit`, `pubchempy`, `biopython`
 - Deep Learning: `torch`, `esm`, `huggingface-hub`
-- Specialized: `enzymetk`, `sciutil`, `sciviso`
+- Other: `enzymetk`, `sciutil`, `sciviso`
 
 See `requirements.txt` for complete list with versions.
 
@@ -63,6 +61,7 @@ The analysis pipeline consists of four main notebooks that should be run in sequ
 ```
 jupyter notebook analysis/N1_CleanReactionData.ipynb
 ```
+
 - Validates and canonicalizes reaction SMILES
 - Creates reaction embeddings using ChemBERTa2 and RxnFP
 - Outputs: `cannoical_smiles.pkl`, `rxn_chemberta.pkl`, `rxn_rxnfp.pkl`
@@ -98,7 +97,6 @@ jupyter notebook analysis/N4_ConvertFormatToLevSeq.ipynb
 
 ## Project Structure  
 
-
 ```
 DirectedEvolutionDB/
 ---  README.md
@@ -118,7 +116,6 @@ DirectedEvolutionDB/
 
 ## Output Files  
 
-
 - `cannoical_smiles.pkl`: Standardized reaction SMILES
 - `rxn_chemberta.pkl`: ChemBERTa2 reaction embeddings
 - `rxn_rxnfp.pkl`: RxnFP reaction fingerprints
@@ -127,7 +124,6 @@ DirectedEvolutionDB/
 
 ## Key Findings  
 
-
 1. Directed evolution has successfully expanded enzyme function into previously unexplored chemical space
 2. Engineered enzymes cluster in distinct regions when visualized using dimensionality reduction
 3. Different research groups tend to explore different regions of chemical/sequence space
@@ -135,12 +131,15 @@ DirectedEvolutionDB/
 
 ## Contributing  
 
+We welcome contributions! Please feel free to submit issues or pull requests. For formatting please format your data in the `LevSeq` output format.
 
-We welcome contributions! Please feel free to submit issues or pull requests.
+This means we require several headers.
 
 ## Citation
 
-Coming soon!
+To cite please refer to our releases. 
+
+A paper citation will be coming soon.
 
 ## License
 
